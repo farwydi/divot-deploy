@@ -1,0 +1,17 @@
+environment:
+  DB_ENDPOINT: ${DB_ENDPOINT}
+  DB_KEY: ${DB_KEY}
+  DB_SECRET: ${DB_SECRET}
+  DB_BUCKET: ${DB_BUCKET}
+  DB_REGION: ${DB_REGION}
+  WOWLOGS_CLIENT_ID: ${WOWLOGS_CLIENT_ID}
+  WOWLOGS_CLIENT_SECRET: ${WOWLOGS_CLIENT_SECRET}
+packages:
+    - name: divot
+      shared: false
+      functions:
+        - name: scanlogs
+          binary: false
+          main: ""
+          runtime: go:default
+          web: false
